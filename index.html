@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/style.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+    <script src="dados.js"></script>
+    <title>ℋ𝒶𝓻𝓻𝓎 𝓟ℴ𝓽𝓽𝓮𝓻</title>
+</head>
+
+<body>
+    <header>
+
+        <nav id="navbar">
+            <i class="fa-solid fa-hat-wizard"> 𝐇𝐚𝐫𝐫𝐲 𝐩𝐨𝐭𝐭𝐞𝐫</i>
+            <div id="nav_center">
+                <input id="campo-pesquisa" type="text" placeholder="Pesquise aqui...">
+                <button onclick="redirecionarPesquisa()">Pesquisar</button>
+            </div>
+
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#menu">Produtos<i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#roupas.hp">Roupas</a></li>
+                        <li><a href="#acessórios.hp">Acessórios</a></li>
+                        <li><a href="#livros">Edição de livros</a></li>
+                        <li><a href="#em.alta">Itens em alta</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a href="menu.html">Menu <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <section id="produtos-principais">Em alta</section>
+                        <section id="favoritos">Favoritos</section>
+                        <section id="esgotados">Esgotados</section>
+
+                    </ul>
+                </li>
+
+            </ul>
+
+            <button class="open-modal" id="login-button">
+                <a href="login.html">Login</a>
+            </button>
+
+            <span id="user-info" style="display:none; font-weight: bold; margin-left: 10px;"></span>
+            <button id="logout-button" style="display:none; margin-left: 10px;">Logout</button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Produtos</a>
+                </li>
+            </ul>
+
+            <button id="mobile-login-button" class="open-modal">
+                <a href="login.html">Login</a>
+            </button>
+
+            <span id="mobile-user-info" style="display: none;"></span>
+
+
+            <button id="mobile-logout-button" style="display: none;">Logout</button>
+        </div>
+    </header>
+
+
+    <main id="content">
+        <section id="home">
+            <div class="shape"> <img src="img/" alt=""></div>
+            <div id="cta">
+                <h1 class="title">
+                    Do mundo mágico direto para
+                    <span>você ⚡︎</span>
+                </h1>
+
+                <p class="description">
+                    De Hogwarts para o seu lar — encantos que aquecem o coração!
+                </p>
+
+                <div id="cta_buttons">
+                    <a href="#" class="btn-default">
+                        Ver produtos
+                    </a>
+
+                    <a href="tel:+55555555555" id="phone_button">
+                        <button class="btn-default">
+                            <i class="fa-solid fa-phone"></i>
+                        </button> (09) 9347-1997
+                    </a>
+                </div>
+
+                <div class="social-media-buttons">
+                    <a href="">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a href="">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="menu">
+            <h2 class="section-title">Produtos</h2>
+            <h3 class="section-subtitle">Nossa seleção de artefatos bruxos</h3>
+
+            <div id="dishes">
+                <div class="dish">
+                    <div class="dish-bolt">
+                        <i class="fa-solid fa-bolt"></i>
+                        <div class="magic-particles"></div>
+                    </div>
+
+                    <img src="img/" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        Moletom Canguru Harry Potter
+                    </h3>
+
+                    <span class="dish-description">
+                        O Moletom canguru com capuz e bolso frontal é confeccionado em poliéster e algodão e com o interior flanelado, ideal para sair de casa confortável e com estilo. 
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(1.000+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$ 119,90</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-bolt">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <img src="imgs/" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        Quadro 3D Harry Potter
+                    </h3>
+
+                    <span class="dish-description">
+                        Dê um toque mágico à sua decoração com este quadro 3D com transição de imagem do pôster de Sirius Black. Medidas de 30 cm x 40 cm.
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(1.000+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$ 79,90</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-bolt">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <img src="imgs/" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        Harry Potter Academia Mágico Pena Pen Set Caixa De Presente
+                    </h3>
+
+                    <span class="dish-description">
+                        Caneta tinteiro vintage com corpo de cobre e ponta de aço inoxidável para uma escrita suave. Acompanha caixa de presente, ideal para presentear. 
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(1.000+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$ 79,90</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-bolt">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <img src="imgs/" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        Camiseta 100% Algodão Premium Casual Harry Potter
+                    </h3>
+
+                    <span class="dish-description">
+                        Camiseta 100% algodão premium, modelo casual com estampa de Harry Potter Hogwarts. Lançamento 2024, disponível nos tamanhos P, M, G e GG. 
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(1.000+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$ 69,90</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <h3 class="section-subtitle">Os favoritos do mundo bruxo no momento</h3>
+
+            <div id="dishes">
+                <div class="dish">
+                    <div class="dish-bolt">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <img src="imgs/" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        Livro Caixa Harry Potter Edição Premium
+                    </h3>
+
+                    <span class="dish-description">
+                        A icônica saga de Harry Potter em uma edição especial! Um box completo para reviver a magia de Hogwarts! 🏰🪄
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(1.000+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$ 299,90</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-bolt">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <img src="imgs/" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        Kit Exclusivo Harry Potter
+                    </h3>
+
+                    <span class="dish-description">
+                        O kit inclui uma Caixinha de Música, um Chaveiro Harry Potter e uma Pulseira Pomo de Ouro. Ideal para fãs de todas as idades!
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(1.000+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$ 99,90</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-bolt">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <img src="imgs/" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        Pulseira Harry Potter
+                    </h3>
+
+                    <span class="dish-description">
+                        Feita com uma liga metálica leve e durável, possui 5 pingentes detalhados de Harry, Hermione, Ron, o brasão de Hogwarts e o Expresso de Hogwarts. 
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(1.000+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$ 59,90</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-bolt">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <img src="imgs/" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        Gargantilha Harry Potter em Banho de Ouro
+                    </h3>
+
+                    <span class="dish-description">
+                        Gargantilha banhada a ouro 18k com pingente delicado (19,5 mm x 17 mm) e corrente de 45 cm. Inspirada no universo Harry Potter, acompanha certificado de garantia de 1 ano, estojo de veludo e suporte pós-venda.
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(1.000+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$ 89,90</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <h3 class="section-subtitle"> Produtos que estão ficando esgotados no mundo mágico </h3>
+
+            <div id="dishes">
+                <div class="dish">
+                    <div class="dish-bolt">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <img src="imgs/" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        Jogo de Xadrez Harry Potter 900 peças
+                    </h3>
+
+                    <span class="dish-description">
+                       O Jogo de Xadrez Harry Potter da BELLA é perfeito para quem quer mergulhar no mundo mágico de Hogwarts. Com 900 peças e 4 personagens articulados, garante partidas estratégicas e diversão. Acompanha manual de instruções ilustrado e é uma ótima adição para fãs da saga. 
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(1.000+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$ 413,29</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-bolt">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <img src="imgs/" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        Asmodee Jogo de tabuleiro Harry Potter Hogwarts Battle
+                    </h3>
+
+                    <span class="dish-description">
+                      Jogo cooperativo com Harry, Ron, Hermione ou Neville para impedir vilões de dominar Hogwarts em sete desafios. Vença derrotando os vilões antes que controlem todos os lugares. Inclui tabuleiro, dados, fichas e regras.
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(1.000+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$254.99</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+    </main>
+
+    <footer>
+        <img src="src/images/wave.svg" alt="">
+
+        <div id="footer_items">
+            <span id="copyright">
+                © 2025 Ana Grazi — Magia que atravessa a Plataforma 9¾
+            </span>
+
+            <div class="social-media-buttons">
+                <a href="">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/11.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.8.1/firebase-auth-compat.js"></script>
+    </head>
+
+    <body>
+
+        <nav>
+            <button id="login-button">Entrar</button>
+            <span id="user-info" style="display:none;"></span>
+            <button id="logout-button" style="display:none;">Sair</button>
+
+            <button id="mobile-login-button">Entrar</button>
+            <span id="mobile-user-info" style="display:none;"></span>
+            <button id="mobile-logout-button" style="display:none;">Sair</button>
+
+        </nav>
+
+        <script>
+            // Configuração do Firebase
+            const firebaseConfig = {
+                apiKey: "AIzaSyDmhDzX7Scg9xBbwbxqrn5JZuBP_gQT-AI",
+                authDomain: "lojinha-de-harry-potter.firebaseapp.com",
+                projectId: "lojinha-de-harry-potter",
+                storageBucket: "lojinha-de-harry-potter.appspot.com",
+                messagingSenderId: "312407656880",
+                appId: "1:312407656880:web:b13c28270633320ac9ae75",
+                measurementId: "G-LL0QVS84QC"
+            };
+
+            // Inicializa o Firebase
+            const app = firebase.initializeApp(firebaseConfig);
+            const auth = firebase.auth();
+
+            // Elementos da navbar desktop
+            const loginButton = document.getElementById('login-button');
+            const userInfo = document.getElementById('user-info');
+            const logoutButton = document.getElementById('logout-button');
+
+            // Elementos da navbar mobile
+            const mobileLoginButton = document.getElementById('mobile-login-button');
+            const mobileUserInfo = document.getElementById('mobile-user-info');
+            const mobileLogoutButton = document.getElementById('mobile-logout-button');
+
+            // Observador de estado de autenticação
+            auth.onAuthStateChanged((user) => {
+                if (user) {
+                    // Usuário logado
+                    updateUIForLoggedInUser(user);
+                } else {
+                    // Usuário não logado
+                    updateUIForLoggedOutUser();
+                }
+            });
+
+            // Função para atualizar a UI quando o usuário está logado
+            function updateUIForLoggedInUser(user) {
+                // Navbar desktop
+                if (loginButton) loginButton.style.display = 'none';
+                if (userInfo) {
+                    userInfo.style.display = 'inline-block';
+                    userInfo.textContent = `Olá, ${user.email || 'Usuário'}`;
+                }
+                if (logoutButton) logoutButton.style.display = 'inline-block';
+
+                // Navbar mobile
+                if (mobileLoginButton) mobileLoginButton.style.display = 'none';
+                if (mobileUserInfo) {
+                    mobileUserInfo.style.display = 'inline-block';
+                    mobileUserInfo.textContent = `Olá, ${user.email || 'Usuário'}`;
+                }
+                if (mobileLogoutButton) mobileLogoutButton.style.display = 'inline-block';
+
+                // Armazena no localStorage que o usuário acabou de fazer login
+                localStorage.setItem("justLoggedIn", "true");
+            }
+
+            // Função para atualizar a UI quando o usuário faz logout
+            function updateUIForLoggedOutUser() {
+                // Navbar desktop
+                if (loginButton) loginButton.style.display = 'inline-block';
+                if (userInfo) userInfo.style.display = 'none';
+                if (logoutButton) logoutButton.style.display = 'none';
+
+                // Navbar mobile
+                if (mobileLoginButton) mobileLoginButton.style.display = 'inline-block';
+                if (mobileUserInfo) mobileUserInfo.style.display = 'none';
+                if (mobileLogoutButton) mobileLogoutButton.style.display = 'none';
+
+                // Remove a flag de login recente
+                localStorage.removeItem("justLoggedIn");
+            }
+
+            // Evento de logout para desktop
+            if (logoutButton) {
+                logoutButton.addEventListener('click', () => {
+                    auth.signOut().then(() => {
+                        updateUIForLoggedOutUser();
+                    }).catch((error) => {
+                        console.error("Erro ao fazer logout:", error);
+                    });
+                });
+            }
+
+            // Evento de logout para mobile
+            if (mobileLogoutButton) {
+                mobileLogoutButton.addEventListener('click', () => {
+                    auth.signOut().then(() => {
+                        updateUIForLoggedOutUser();
+                    }).catch((error) => {
+                        console.error("Erro ao fazer logout:", error);
+                    });
+                });
+            }
+
+            // Função para fazer login (deve ser chamada do seu formulário de login)
+            window.loginUser = function(email, password) {
+                auth.signInWithEmailAndPassword(email, password)
+                    .then((userCredential) => {
+                        // Login bem-sucedido - o observador onAuthStateChanged irá atualizar a UI
+                    })
+                    .catch((error) => {
+                        console.error("Erro no login:", error);
+                        alert("Erro no login: " + error.message);
+                    });
+            };
+        </script>
+
+    </body>
+
+</html>

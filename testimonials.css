@@ -1,0 +1,151 @@
+body {
+    background-color: #0632f8;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/* POP UP */
+
+form {
+    border: none;
+    width: 350px;
+    border-radius: 24px;
+    padding: 18px;
+}
+
+
+/* Cabeçalho do POP UP */
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+
+/* Título do POP UP */
+
+.modal-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(122, 54, 54);
+}
+
+
+/* Botão de fechar POP UP */
+
+.close-modal {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: #9CA3AF;
+    font-size: 18px;
+}
+
+
+/* Corpo do POP UP */
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+/* Input do formulário */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+
+/* Label do input */
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(63, 24, 24, 0.664);
+}
+
+
+/* Input */
+
+.input-group input {
+    border: 1px solid #D1D5DB;
+    background-color: #F9FAFB;
+    border-radius: 8px;
+    padding: 10px 16px;
+}
+
+
+/* Input com foco */
+
+.input-group input:focus {
+    outline: 1px solid #009f97;
+}
+
+
+/* Opções de senha */
+
+.password-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Checkbox de lembrar senha */
+
+.remember-password {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: rgba(63, 24, 24, 0.877);
+}
+
+
+/* Link de esqueci a senha */
+
+.forgot-password {
+    font-size: 12px;
+    color: rgba(63, 24, 24, 0.87);
+    text-decoration: none;
+}
+
+
+/* Botão de login */
+
+#login_button {
+    background-color: #090400;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/* Rodapé do modal */
+
+.register span {
+    font-size: 14px;
+    color: #4c618b;
+}
+
+
+/* Link de registrar */
+
+.register a {
+    font-size: 14px;
+    color: rgba(63, 24, 24, 0.863);
+    text-decoration: none;
+}
